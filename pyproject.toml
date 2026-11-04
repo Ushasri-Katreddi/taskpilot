@@ -1,0 +1,27 @@
+
+[project]
+name = "taskpilot"
+version = "0.1.0"
+description = "AI Productivity Assistant using FastMCP and LangChain"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastmcp>=4.0,<5.0",
+    "langchain[mcp]>=1.4.0",
+    "python-dotenv",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "httpx",
+]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
