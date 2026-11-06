@@ -35,11 +35,14 @@ def multiply(a: float, b: float) -> float:
 @mcp.tool()
 def percentage(value: float, total: float) -> float:
     """
-    Calculate what percentage a value represents of a total.
+    Calculate what percentage a value represents out of a total.
 
-    Args:
-        value: The value whose percentage is calculated.
-        total: The reference total. Must not be zero.
+    Formula: (value / total) * 100.
+
+    Example:
+    value=25, total=200 returns 12.5.
+
+    This tool does NOT calculate X percent of Y.
     """
     if total == 0:
         raise ValueError("Cannot calculate percentage: total cannot be zero.")
